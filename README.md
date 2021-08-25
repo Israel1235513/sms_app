@@ -12,7 +12,18 @@ This python script reads phone number from a json file and sends sms to those ph
   ```sh
   py venv venv
   ```
-    
+
+3. Activate the virtual env:
+
+      Windows:
+      ```sh
+      .\venv\Scripts\activate
+      ```
+
+      Unix o MacOS:
+      ```sh
+      source venv/bin/activate
+      ```
 
 3. install requirements file:
   ```sh
