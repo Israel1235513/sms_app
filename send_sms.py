@@ -2,15 +2,15 @@ import json
 from twilio.base.exceptions import TwilioRestException
 from twilio.rest import Client
 
+# Add you auth information here:
+# Your Account SID from twilio.com/console
 TWILIO_ACCOUNT_SID = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+# Your Auth Token from twilio.com/console
 TWILIO_AUTH_TOKEN = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+# Your Phone Number from twilio.com/console
 TWILIO_PHONE_NUMBER = "XXXXXXXXXXX"
 
 def main():
-# Your Account SID from twilio.com/console
-  account_sid = TWILIO_ACCOUNT_SID
-# Your Auth Token from twilio.com/console
-  auth_token  = TWILIO_AUTH_TOKEN
   
   with open("./phones.json", "r") as file:
     try:
@@ -19,8 +19,9 @@ def main():
     except json.decoder.JSONDecodeError:
       print("There was a problem accessing the data.")
 
+
   try:
-    client = Client(account_sid, auth_token)
+    client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
 
     for number in range(len(phone_list)):
       message = client.messages.create(
@@ -32,6 +33,7 @@ def main():
 
   except TwilioRestException as e:
     print(e)
+
 
 if __name__ == "__main__":
     main()  
