@@ -4,11 +4,11 @@ from twilio.rest import Client
 
 # Add you auth information here:
 # Your Account SID from twilio.com/console
-TWILIO_ACCOUNT_SID = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+TWILIO_ACCOUNT_SID = "US37237bbc98c33c921114ec52778856a1"
 # Your Auth Token from twilio.com/console
-TWILIO_AUTH_TOKEN = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+TWILIO_AUTH_TOKEN = "4P1ZJDTLX6PBB6CL8AG2FMFG"
 # Your Phone Number from twilio.com/console
-TWILIO_PHONE_NUMBER = "XXXXXXXXXXX"
+TWILIO_PHONE_NUMBER = "+559899214-9806"
 
 def main():
   
